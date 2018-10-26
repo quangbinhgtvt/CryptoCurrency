@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="PriceTableViewCell" customModule="CryptoCurrency" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CoinName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDg-ux-cIV">
+                        <rect key="frame" x="10" y="10" width="300" height="50"/>
+                        <color key="backgroundColor" red="0.57938613029999997" green="1" blue="0.52201339759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="CVM-C6-Fo5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTo-hk-pIE">
+                        <rect key="frame" x="10" y="130" width="300" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Wnd-eU-Jh4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd5-jT-Y1Q">
+                        <rect key="frame" x="10" y="70" width="300" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="XXL-xD-vE6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Dd5-jT-Y1Q" secondAttribute="trailing" constant="10" id="5wm-k5-3jX"/>
+                    <constraint firstItem="SDg-ux-cIV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="VdP-3X-CxQ"/>
+                    <constraint firstItem="Dd5-jT-Y1Q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="de4-4a-Fwf"/>
+                    <constraint firstItem="oTo-hk-pIE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="eOH-bN-1I1"/>
+                    <constraint firstAttribute="trailing" secondItem="SDg-ux-cIV" secondAttribute="trailing" constant="10" id="fKR-Q0-cAa"/>
+                    <constraint firstItem="Dd5-jT-Y1Q" firstAttribute="top" secondItem="SDg-ux-cIV" secondAttribute="bottom" constant="10" id="gPW-Ri-Hn8"/>
+                    <constraint firstItem="oTo-hk-pIE" firstAttribute="top" secondItem="Dd5-jT-Y1Q" secondAttribute="bottom" constant="10" id="msC-bb-Tpo"/>
+                    <constraint firstItem="SDg-ux-cIV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="p7O-xE-Dqf"/>
+                    <constraint firstAttribute="trailing" secondItem="oTo-hk-pIE" secondAttribute="trailing" constant="10" id="zy5-QJ-Zfa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="coinNameLbl" destination="SDg-ux-cIV" id="Ef6-X8-Ro9"/>
+                <outlet property="coinPriceEURLbl" destination="oTo-hk-pIE" id="HdQ-WO-Fi9"/>
+                <outlet property="coinPriceUSDLbl" destination="Dd5-jT-Y1Q" id="g31-bA-cFt"/>
+            </connections>
+            <point key="canvasLocation" x="-163" y="131"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="currencyCell" rowHeight="66" id="KGk-i7-Jjw" customClass="CurrencyTableViewCell" customModule="CryptoCurrency" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="65.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vlL-kC-D2j">
+                        <rect key="frame" x="15" y="7" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="vlL-kC-D2j" secondAttribute="height" multiplier="1:1" id="8vA-3C-Vre"/>
+                            <constraint firstAttribute="width" constant="50" id="SxO-LJ-bJa"/>
+                            <constraint firstAttribute="height" constant="50" id="che-ZS-SRk"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkL-Lh-b5L">
+                        <rect key="frame" x="95" y="7.5" width="231" height="49"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="49" id="v06-be-vyv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="vlL-kC-D2j" secondAttribute="bottom" constant="8.5" id="1dA-XU-k3O"/>
+                    <constraint firstItem="CkL-Lh-b5L" firstAttribute="centerY" secondItem="vlL-kC-D2j" secondAttribute="centerY" id="445-nq-wfE"/>
+                    <constraint firstItem="vlL-kC-D2j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="7iG-hc-etu"/>
+                    <constraint firstAttribute="trailing" secondItem="CkL-Lh-b5L" secondAttribute="trailing" constant="16" id="H7k-O5-wUW"/>
+                    <constraint firstItem="vlL-kC-D2j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="SER-sD-drD"/>
+                    <constraint firstItem="CkL-Lh-b5L" firstAttribute="leading" secondItem="vlL-kC-D2j" secondAttribute="trailing" constant="30" id="XBf-yV-UIf"/>
+                    <constraint firstItem="CkL-Lh-b5L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="iuM-H3-xXA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageCurrency" destination="vlL-kC-D2j" id="8dg-kw-l8v"/>
+                <outlet property="nameCurrency" destination="CkL-Lh-b5L" id="9RF-fT-XAK"/>
+            </connections>
+            <point key="canvasLocation" x="97.599999999999994" y="109.74512743628186"/>
+        </tableViewCell>
+    </objects>
+</document>
