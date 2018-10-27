@@ -11,10 +11,12 @@ import Foundation
 struct Currency {
     var image: String?
     var name: String?
-    var baseImageURL: String?
     var coinPrices = [String : String]()
     
     func getImageURL() -> String{
-        return baseURL + image!
+        if let imageURL = self.image{
+             return baseURL + imageURL
+        }
+       return ""
     }
 }

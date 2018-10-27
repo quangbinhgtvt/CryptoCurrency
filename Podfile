@@ -8,7 +8,7 @@ target 'CryptoCurrency' do
   pod 'SwiftyJSON'
   pod 'SDWebImage'
   pod 'JGProgressHUD'
-
+  pod 'MBProgressHUD'
   # Pods for CryptoCurrency
 
   target 'CryptoCurrencyTests' do

@@ -24,7 +24,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="CVM-C6-Fo5"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>

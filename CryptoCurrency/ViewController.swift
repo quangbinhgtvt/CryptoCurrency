@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import SDWebImage
-import JGProgressHUD
+import MBProgressHUD
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -40,6 +40,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func getCoinListAPI(){
         let URL = "api/data/coinlist"
         let coinslistURL = baseURL + URL
+        
+        DispatchQueue.main.async {
+            MBProgressHUD.showAdded(to: self.view, animated: true)
+        }
+        
         Alamofire.request(coinslistURL, method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON {
             (response) in
             
@@ -49,7 +54,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             case .failure(let error):
                 self.handGetListCoinFailure(error: error)
             }
-            self.currencyTableView.reloadData()
         }
     }
     
@@ -67,18 +71,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             
         }
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: self.view, animated: true)
+            self.currencyTableView.reloadData()
+            
+        }
     }
     
     func handGetListCoinFailure(error: Error){
-        
+        MBProgressHUD.hide(for: self.view, animated: true)
     }
-    //animation loading
-    func showLoadingStatus(){
-        let hud = JGProgressHUD(style: .extraLight)
-        hud.textLabel.text = "Loading"
-        hud.show(in: self.view)
-        hud.dismiss(afterDelay: 3.0)
-    }
+
     //table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coinList.count
@@ -91,10 +94,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if error != nil {print(error!)}
         })
         cell.nameCurrency.text = coinList[indexPath.row].name
-        
-        DispatchQueue.main.async {
-            self.showLoadingStatus()
-        }
         
         return cell
     }
